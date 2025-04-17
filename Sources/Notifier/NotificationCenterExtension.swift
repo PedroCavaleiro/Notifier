@@ -13,7 +13,7 @@ extension NotificationCenter {
     /// - Parameters:
     ///  - listener: The `Notification.Name` to send the notification to
     ///  - object: The `[AnyHashable: Any]` with data to send with the notification, defaults to nil
-    static func notify(_ listener: Notification.Name, with object: [AnyHashable: Any]? = nil) {
+    public static func notify(_ listener: Notification.Name, with object: [AnyHashable: Any]? = nil) {
         NotificationCenter.default.post(name: listener, object: nil, userInfo: object)
     }
     
@@ -21,7 +21,7 @@ extension NotificationCenter {
     /// - Parameters:
     ///  - listener: The notification name to send the notification to
     ///  - object: The `[AnyHashable: Any]` with data to send with the notification, defaults to nil
-    static func notify(_ listener: String, with object: [AnyHashable: Any]? = nil) {
+    public static func notify(_ listener: String, with object: [AnyHashable: Any]? = nil) {
         NotificationCenter.default.post(name: Notification.Name(listener), object: nil, userInfo: object)
     }
     
